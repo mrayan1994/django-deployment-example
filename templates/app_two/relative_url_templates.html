@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "app_one/base.html" %}
+{% block body_block %}
+
+  <h1>Welcome to Relative URL Templates</h1>
+  <p>Redirect to <a href="{% url 'admin:index' %}">Admin Index</a> Page</p>
+  <p>Redirect to <a href="{% url 'app_one:home' %}">App One Home</a> Page</p>
+  <p>Redirect to <a href="{% url 'app_two:home' %}">App Two Home</a> Page</p>
+
+{% endblock %}

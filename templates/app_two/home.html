@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "app_one/base.html" %}
+{% block body_block %}
+{% load filters %}
+
+  <h1>Welcome to App Two Home Page!</h1>
+
+  <p>{{ text | remove_all_char:'l' }}</p>
+
+  <p>{{ number | add:10 }}</p>
+
+{% endblock %}

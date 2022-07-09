@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends "app_one/base.html" %}
+{% load static %}
+
+{% block body_block %}
+
+  <link rel="stylesheet" href="{% static "app_one/css/access_records_style.css" %}">
+
+
+  <h1>Welcome to Django Level 2</h1>
+  <h2>Here are your Access Records:</h2>
+
+  <div>
+
+    {% if access_records %}
+
+      <table class="access_records">
+
+        <thead>
+
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+
+        </thead>
+
+        {% for acc in access_records %}
+
+          <tr>
+
+            <td>{{ acc.webpage }}</td>
+            <td>{{ acc.date }}</td>
+
+          </tr>
+
+        {% endfor %}
+
+      </table>
+
+    {% else %}
+
+      <p>NO ACCESS RECORDS FOUND!</p>
+
+    {% endif %}
+
+  </div>
+
+  <img src="{% static "app_one/images/WN9wt8.jpg" %}" alt="image didn't show">
+
+{% endblock %}
